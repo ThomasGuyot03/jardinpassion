@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À Propos de Jardin Passion — Notre Histoire et Notre Mission</title>
+<meta name="description" content="Découvrez l'histoire de Jardin Passion, votre blog dédié au jardinage bio et aux plaisirs du potager. Qui sommes-nous ? Pourquoi ce blog ? Notre équipe vous raconte.">
+<meta property="og:title" content="À Propos de Jardin Passion — Notre Histoire et Notre Mission">
+<meta property="og:description" content="Découvrez l'histoire de Jardin Passion, votre blog dédié au jardinage bio et aux plaisirs du potager.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--primary-color:#1a5e1a;--primary-light:#2d7a2d;--secondary-color:#3d8a3d;--accent-color:#7cb342;--accent-light:#a5d6a7;--text-primary:#2c2c2c;--text-secondary:#555;--text-light:#777;--bg-primary:#fff;--bg-secondary:#f8fdf8;--border-color:#e8f5e9;--shadow-sm:0 2px 8px rgba(26,94,26,.08);--shadow-md:0 4px 20px rgba(26,94,26,.12);--shadow-lg:0 8px 40px rgba(26,94,26,.16);--radius-sm:6px;--radius-md:12px;--radius-lg:20px;--sp4:4px;--sp8:8px;--sp12:12px;--sp16:16px;--sp24:24px;--sp32:32px;--sp48:48px;--sp64:64px;}
+body{font-family:'Inter',sans-serif;color:var(--text-primary);background:var(--bg-primary);line-height:1.7;}
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-color);box-shadow:var(--shadow-sm);}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 var(--sp24);display:flex;align-items:center;justify-content:space-between;height:70px;}
+.logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--primary-color);text-decoration:none;}
+.logo span{color:var(--accent-color);}
+nav ul{display:flex;gap:var(--sp32);list-style:none;}
+nav a{text-decoration:none;color:var(--text-secondary);font-weight:500;font-size:.95rem;transition:color .2s;}
+nav a:hover{color:var(--primary-color);}
+nav a.active{color:var(--primary-color);font-weight:600;}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:var(--sp8);}
+.menu-toggle span{width:24px;height:2px;background:var(--text-primary);transition:all .3s;}
+
+/* Hero */
+.about-hero{background:linear-gradient(135deg,var(--primary-color) 0%,var(--primary-light) 50%,var(--secondary-color) 100%);color:#fff;padding:var(--sp64) var(--sp24);text-align:center;}
+.about-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:700;margin-bottom:var(--sp24);}
+.about-hero p{font-size:1.2rem;color:rgba(255,255,255,.9);max-width:700px;margin:0 auto;line-height:1.8;}
+
+/* Content */
+.page-content{max-width:900px;margin:0 auto;padding:var(--sp64) var(--sp24);}
+.section{margin-bottom:var(--sp64);}
+.section h2{font-family:'Playfair Display',serif;font-size:2rem;color:var(--primary-color);margin-bottom:var(--sp32);position:relative;padding-bottom:var(--sp16);}
+.section h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;background:var(--accent-color);border-radius:2px;}
+.section p{color:var(--text-secondary);line-height:1.9;margin-bottom:var(--sp16);font-size:1.05rem;}
+
+/* Story blocks */
+.story-block{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp48);align-items:center;margin-bottom:var(--sp48);}
+.story-block.reverse{direction:rtl;}
+.story-block.reverse > *{direction:ltr;}
+.story-image{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);}
+.story-image img{width:100%;height:300px;object-fit:cover;display:block;}
+.story-image-placeholder{width:100%;height:300px;background:linear-gradient(135deg,var(--bg-secondary),var(--accent-light));border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-size:5rem;}
+.story-text h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--primary-color);margin-bottom:var(--sp16);}
+.story-text p{color:var(--text-secondary);line-height:1.8;margin-bottom:var(--sp12);}
+
+/* Values */
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp24);margin-top:var(--sp32);}
+.value-card{background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:var(--sp32);text-align:center;transition:transform .2s,box-shadow .2s;}
+.value-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.value-icon{font-size:2.5rem;margin-bottom:var(--sp16);}
+.value-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--primary-color);margin-bottom:var(--sp12);}
+.value-card p{font-size:.9rem;color:var(--text-secondary);line-height:1.7;}
+
+/* Team */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--sp32);margin-top:var(--sp32);}
+.team-card{background:var(--bg-secondary);border-radius:var(--radius-lg);padding:var(--sp32);text-align:center;border:1px solid var(--border-color);}
+.team-avatar{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--primary-color),var(--accent-color));display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto var(--sp16);}
+.team-name{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--primary-color);margin-bottom:var(--sp4);}
+.team-role{font-size:.85rem;color:var(--accent-color);font-weight:600;margin-bottom:var(--sp12);text-transform:uppercase;letter-spacing:.5px;}
+.team-bio{font-size:.9rem;color:var(--text-secondary);line-height:1.7;}
+
+/* Stats */
+.stats-bar{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;padding:var(--sp48) var(--sp24);margin:var(--sp64) 0;}
+.stats-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp32);text-align:center;}
+.stat-item .stat-number{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:#fff;margin-bottom:var(--sp4);}
+.stat-item .stat-label{font-size:.9rem;color:rgba(255,255,255,.8);}
+
+/* CTA */
+.about-cta{background:linear-gradient(135deg,#e8f5e9,#f1f8e9);border-radius:var(--radius-lg);padding:var(--sp48);text-align:center;margin-bottom:var(--sp64);}
+.about-cta h2{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--primary-color);margin-bottom:var(--sp16);}
+.about-cta p{color:var(--text-secondary);max-width:500px;margin:0 auto var(--sp24);}
+.btn-primary{display:inline-block;background:var(--primary-color);color:#fff;padding:var(--sp16) var(--sp32);border-radius:var(--radius-md);text-decoration:none;font-weight:600;transition:all .2s;margin:var(--sp8);}
+.btn-primary:hover{background:var(--primary-light);transform:translateY(-2px);box-shadow:var(--shadow-md);}
+.btn-secondary{display:inline-block;background:transparent;color:var(--primary-color);padding:var(--sp16) var(--sp32);border-radius:var(--radius-md);text-decoration:none;font-weight:600;border:2px solid var(--primary-color);transition:all .2s;margin:var(--sp8);}
+.btn-secondary:hover{background:var(--primary-color);color:#fff;}
+
+/* Footer */
+.footer{background:#1a1a1a;color:#ccc;padding:var(--sp64) 0 var(--sp32);}
+.footer-grid{max-width:1200px;margin:0 auto;padding:0 var(--sp24);display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp48);}
+.footer-brand .logo{color:#fff;}
+.footer-brand p{margin-top:var(--sp16);font-size:.875rem;line-height:1.7;color:#999;}
+.footer h4{color:#fff;font-size:1rem;font-weight:600;margin-bottom:var(--sp16);}
+.footer ul{list-style:none;}
+.footer ul li{margin-bottom:var(--sp8);}
+.footer ul a{color:#999;text-decoration:none;font-size:.875rem;transition:color .2s;}
+.footer ul a:hover{color:var(--accent-color);}
+.footer-bottom{max-width:1200px;margin:var(--sp48) auto 0;padding:var(--sp24) var(--sp24) 0;border-top:1px solid #333;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:#666;}
+
+@media(max-width:768px){
+  .story-block,.story-block.reverse{grid-template-columns:1fr;direction:ltr;}
+  .values-grid{grid-template-columns:1fr;}
+  .stats-inner{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:repeat(2,1fr);}
+  .menu-toggle{display:flex;}
+  nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:var(--sp24);box-shadow:var(--shadow-md);}
+  nav ul.active{display:flex;}
+}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr;}.stats-inner{grid-template-columns:repeat(2,1fr);}}
+</style>
+<!-- ⚠️ REMPLACEZ ca-pub-XXXXXXXXXXXXXXXX par votre ID éditeur AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Jardin <span>Passion</span></a>
+    <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    <nav><ul id="navMenu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#potager">Potager</a></li>
+      <li><a href="index.html#fleurs">Fleurs</a></li>
+      <li><a href="index.html#conseils">Conseils</a></li>
+      <li><a href="a-propos.html" class="active">À propos</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<section class="about-hero">
+  <h1>Bienvenue dans notre univers vert 🌿</h1>
+  <p>Jardin Passion est né d'un amour profond pour la nature, le vivant et le plaisir simple de mettre les mains dans la terre. Découvrez notre histoire et notre mission.</p>
+</section>
+
+<div class="page-content">
+
+  <div class="section">
+    <h2>Notre histoire</h2>
+    <div class="story-block">
+      <div class="story-image-placeholder">🌱</div>
+      <div class="story-text">
+        <h3>Tout a commencé par un carré potager</h3>
+        <p>En 2018, Marie Jardinet hérite du jardin de sa grand-mère en Bourgogne. Quelques rangées de tomates, un vieux rosier grimpant, des pieds de thym sauvage. Un carré de terre qui va changer sa vie.</p>
+        <p>Marie, graphiste de métier, découvre alors le jardinage avec émerveillement — et avec ses inévitables erreurs de débutante. Elle documente tout : ses essais, ses échecs, ses victoires. Et commence à partager ces notes sur un petit blog.</p>
+      </div>
+    </div>
+    <div class="story-block reverse">
+      <div class="story-image-placeholder">📖</div>
+      <div class="story-text">
+        <h3>Un blog qui grandit avec ses lecteurs</h3>
+        <p>Ce qui était au départ un journal intime devient rapidement une ressource consultée par des milliers de jardiniers amateurs. Les questions fusent, la communauté se forme, et l'aventure Jardin Passion prend son envol.</p>
+        <p>Aujourd'hui, Jardin Passion publie chaque semaine des articles approfondis sur le potager, les fleurs, les arbres fruitiers, et toutes les techniques de jardinage respectueuses du vivant.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Notre mission</h2>
+    <p>Chez Jardin Passion, nous croyons que jardiner est accessible à tous — qu'on dispose d'un grand terrain en campagne ou d'un simple balcon en ville. Notre mission est de rendre le jardinage simple, joyeux et respectueux de l'environnement.</p>
+    <p>Nous ne prônons pas le jardinage parfait. Nous prônons le jardinage vivant : celui qui tolère les imperfections, observe les cycles naturels, et préfère les solutions douces aux produits chimiques. Un jardinage qui prend soin de la terre autant qu'elle prend soin de nous.</p>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🌿</div>
+        <h3>Respecter le vivant</h3>
+        <p>Nous privilégions les approches naturelles et biologiques. Chaque conseil tient compte de l'écosystème du jardin dans sa globalité.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📚</div>
+        <h3>Partager le savoir</h3>
+        <p>Nos articles sont rédigés avec soin, vérifiés, et illustrés d'exemples concrets tirés de notre propre expérience au jardin.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3>Cultiver ensemble</h3>
+        <p>Le jardinage est une pratique communautaire. Nous aimons apprendre de nos lecteurs autant qu'ils apprennent de nous.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-number">50 000+</div>
+      <div class="stat-label">Lecteurs mensuels</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">80+</div>
+      <div class="stat-label">Articles publiés</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">7 ans</div>
+      <div class="stat-label">D'expérience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Bio & naturel</div>
+    </div>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="section">
+    <h2>L'équipe derrière Jardin Passion</h2>
+    <p>Jardin Passion est porté par une petite équipe de passionnés, chacun apportant son expertise et son point de vue pour enrichir nos contenus.</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">👩‍🌾</div>
+        <div class="team-name">Marie Jardinet</div>
+        <div class="team-role">Fondatrice & rédactrice en chef</div>
+        <p class="team-bio">Jardinière autodidacte depuis 2018, spécialiste du potager bio et des plantes aromatiques. Elle gère un jardin de 800 m² en Bourgogne.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">👨‍🔬</div>
+        <div class="team-name">Thomas Verdier</div>
+        <div class="team-role">Expert arbres fruitiers</div>
+        <p class="team-bio">Arboriculteur amateur depuis 20 ans, Thomas cultive un verger de 40 arbres fruitiers dans le Lot-et-Garonne et partage son savoir pratique.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">👩‍🎨</div>
+        <div class="team-name">Sophie Fleury</div>
+        <div class="team-role">Spécialiste jardins fleuris</div>
+        <p class="team-bio">Fleuriste de formation reconvertie en jardinière, Sophie crée des jardins colorés toute l'année et partage sa passion pour les associations florales.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-cta">
+    <h2>Rejoignez notre communauté !</h2>
+    <p>Des conseils hebdomadaires, des guides pratiques, et une communauté de jardiniers passionnés. Tout cela gratuitement dans votre boîte mail.</p>
+    <a href="contact.html" class="btn-primary">Nous contacter</a>
+    <a href="index.html" class="btn-secondary">Lire nos articles</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Jardin <span>Passion</span></a>
+      <p>Votre guide de jardinage pour cultiver avec passion, respect de la nature et plaisir au quotidien.</p>
+    </div>
+    <div>
+      <h4>Articles récents</h4>
+      <ul>
+        <li><a href="article-fruitiers.html">Arbres Fruitiers Faciles</a></li>
+        <li><a href="article-balcon.html">Potager sur Balcon</a></li>
+        <li><a href="article-lune.html">Jardiner avec la Lune</a></li>
+        <li><a href="article-rosiers.html">Taille des Rosiers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Catégories</h4>
+      <ul>
+        <li><a href="index.html#potager">Potager</a></li>
+        <li><a href="index.html#fleurs">Fleurs & Ornement</a></li>
+        <li><a href="index.html#conseils">Conseils pratiques</a></li>
+        <li><a href="index.html#ecologie">Écologie</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Informations</h4>
+      <ul>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Jardin Passion — Tous droits réservés</span>
+    <span>Fait avec 🌱 et passion</span>
+  </div>
+</footer>
+<script>
+const m=document.getElementById('menuToggle'),n=document.getElementById('navMenu');
+m.addEventListener('click',()=>n.classList.toggle('active'));
+</script>
+<script src="cookie-consent.js"></script>
+</body>
+</html>

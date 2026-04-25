@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions Légales et Politique de Confidentialité | Jardin Passion</title>
+<meta name="description" content="Mentions légales, politique de confidentialité, cookies et données personnelles du site Jardin Passion, conformes au RGPD.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--primary-color:#1a5e1a;--primary-light:#2d7a2d;--secondary-color:#3d8a3d;--accent-color:#7cb342;--accent-light:#a5d6a7;--text-primary:#2c2c2c;--text-secondary:#555;--text-light:#777;--bg-primary:#fff;--bg-secondary:#f8fdf8;--border-color:#e8f5e9;--shadow-sm:0 2px 8px rgba(26,94,26,.08);--shadow-md:0 4px 20px rgba(26,94,26,.12);--radius-sm:6px;--radius-md:12px;--radius-lg:20px;--sp4:4px;--sp8:8px;--sp12:12px;--sp16:16px;--sp24:24px;--sp32:32px;--sp48:48px;--sp64:64px;}
+body{font-family:'Inter',sans-serif;color:var(--text-primary);background:var(--bg-primary);line-height:1.7;}
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-color);box-shadow:var(--shadow-sm);}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 var(--sp24);display:flex;align-items:center;justify-content:space-between;height:70px;}
+.logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--primary-color);text-decoration:none;}
+.logo span{color:var(--accent-color);}
+nav ul{display:flex;gap:var(--sp32);list-style:none;}
+nav a{text-decoration:none;color:var(--text-secondary);font-weight:500;font-size:.95rem;transition:color .2s;}
+nav a:hover{color:var(--primary-color);}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:var(--sp8);}
+.menu-toggle span{width:24px;height:2px;background:var(--text-primary);transition:all .3s;}
+
+.page-hero{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;padding:var(--sp48) var(--sp24);text-align:center;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:var(--sp8);}
+.page-hero p{color:rgba(255,255,255,.85);font-size:.95rem;}
+
+.legal-layout{max-width:1100px;margin:0 auto;padding:var(--sp64) var(--sp24);display:grid;grid-template-columns:260px 1fr;gap:var(--sp48);align-items:start;}
+
+/* Sticky TOC sidebar */
+.legal-toc{position:sticky;top:90px;background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:var(--sp24);}
+.legal-toc h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--primary-color);margin-bottom:var(--sp16);}
+.legal-toc ul{list-style:none;}
+.legal-toc li{margin-bottom:var(--sp8);}
+.legal-toc a{color:var(--text-secondary);text-decoration:none;font-size:.85rem;display:block;padding:var(--sp4) var(--sp8);border-radius:var(--radius-sm);transition:all .2s;}
+.legal-toc a:hover{background:var(--border-color);color:var(--primary-color);}
+
+/* Content */
+.legal-content{max-width:760px;}
+.legal-section{margin-bottom:var(--sp48);}
+.legal-section h2{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--primary-color);margin-bottom:var(--sp24);padding-bottom:var(--sp12);border-bottom:2px solid var(--accent-light);}
+.legal-section h3{font-size:1.1rem;font-weight:600;color:var(--secondary-color);margin:var(--sp24) 0 var(--sp12);}
+.legal-section p{color:var(--text-secondary);margin-bottom:var(--sp16);line-height:1.8;}
+.legal-section ul,.legal-section ol{padding-left:var(--sp24);margin-bottom:var(--sp16);}
+.legal-section li{color:var(--text-secondary);margin-bottom:var(--sp8);line-height:1.7;}
+.legal-section a{color:var(--primary-color);}
+
+.info-box{background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:var(--sp24);margin:var(--sp24) 0;}
+.info-box h4{color:var(--primary-color);font-weight:600;margin-bottom:var(--sp8);}
+.info-box p{color:var(--text-secondary);font-size:.9rem;margin:0;}
+
+.update-notice{background:linear-gradient(135deg,#e3f2fd,#e8eaf6);border:1px solid #90caf9;border-radius:var(--radius-md);padding:var(--sp16) var(--sp24);margin-bottom:var(--sp48);}
+.update-notice p{color:#1565c0;font-size:.9rem;margin:0;}
+
+/* Footer */
+.footer{background:#1a1a1a;color:#ccc;padding:var(--sp64) 0 var(--sp32);}
+.footer-grid{max-width:1200px;margin:0 auto;padding:0 var(--sp24);display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp48);}
+.footer-brand .logo{color:#fff;}
+.footer-brand p{margin-top:var(--sp16);font-size:.875rem;line-height:1.7;color:#999;}
+.footer h4{color:#fff;font-size:1rem;font-weight:600;margin-bottom:var(--sp16);}
+.footer ul{list-style:none;}
+.footer ul li{margin-bottom:var(--sp8);}
+.footer ul a{color:#999;text-decoration:none;font-size:.875rem;transition:color .2s;}
+.footer ul a:hover{color:var(--accent-color);}
+.footer-bottom{max-width:1200px;margin:var(--sp48) auto 0;padding:var(--sp24) var(--sp24) 0;border-top:1px solid #333;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:#666;}
+
+@media(max-width:900px){.legal-layout{grid-template-columns:1fr;}.legal-toc{position:static;}}
+@media(max-width:768px){.footer-grid{grid-template-columns:repeat(2,1fr);}.menu-toggle{display:flex;}nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:var(--sp24);box-shadow:var(--shadow-md);}nav ul.active{display:flex;}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr;}}
+</style>
+<!-- ⚠️ REMPLACEZ ca-pub-XXXXXXXXXXXXXXXX par votre ID éditeur AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Jardin <span>Passion</span></a>
+    <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    <nav><ul id="navMenu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#potager">Potager</a></li>
+      <li><a href="index.html#fleurs">Fleurs</a></li>
+      <li><a href="index.html#conseils">Conseils</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <h1>Mentions Légales & Politique de Confidentialité</h1>
+  <p>Dernière mise à jour : 12 avril 2026</p>
+</div>
+
+<div class="legal-layout">
+  <nav class="legal-toc">
+    <h3>Navigation</h3>
+    <ul>
+      <li><a href="#mentions-legales">1. Mentions légales</a></li>
+      <li><a href="#editeur">2. Éditeur du site</a></li>
+      <li><a href="#hebergement">3. Hébergement</a></li>
+      <li><a href="#propriete-intellectuelle">4. Propriété intellectuelle</a></li>
+      <li><a href="#politique-confidentialite">5. Politique de confidentialité</a></li>
+      <li><a href="#donnees-collectees">6. Données collectées</a></li>
+      <li><a href="#cookies">7. Cookies et publicité</a></li>
+      <li><a href="#google-adsense">8. Google AdSense</a></li>
+      <li><a href="#droits">9. Vos droits (RGPD)</a></li>
+      <li><a href="#contact-dpo">10. Contact & DPO</a></li>
+    </ul>
+  </nav>
+
+  <div class="legal-content">
+    <div class="update-notice">
+      <p>ℹ️ Ce document a été mis à jour le 12 avril 2026 pour refléter nos pratiques actuelles en matière de collecte de données et de publicité, conformément au Règlement Général sur la Protection des Données (RGPD).</p>
+    </div>
+
+    <section class="legal-section" id="mentions-legales">
+      <h2>1. Mentions légales</h2>
+      <p>Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la Confiance en l'Économie Numérique (LCEN), il est porté à la connaissance des utilisateurs et visiteurs du site Jardin Passion les présentes mentions légales.</p>
+      <p>L'utilisation du site <strong>guidesjardinage.fr</strong> implique l'acceptation pleine et entière des conditions générales d'utilisation décrites ci-après. Ces conditions d'utilisation sont susceptibles d'être modifiées ou complétées à tout moment.</p>
+    </section>
+
+    <section class="legal-section" id="editeur">
+      <h2>2. Éditeur du site</h2>
+      <div class="info-box">
+        <h4>Informations sur l'éditeur</h4>
+        <p>
+          <strong>Nom :</strong> Marie Jardinet<br>
+          <strong>Statut :</strong> Particulier – Blog personnel<br>
+          <strong>Adresse :</strong> Bourgogne, France<br>
+          <strong>Email :</strong> contact@guidesjardinage.fr<br>
+          <strong>Directeur de la publication :</strong> Marie Jardinet
+        </p>
+      </div>
+    </section>
+
+    <section class="legal-section" id="hebergement">
+      <h2>3. Hébergement</h2>
+      <p>Le site Jardin Passion est hébergé par :</p>
+      <div class="info-box">
+        <h4>Hébergeur</h4>
+        <p>
+          Les informations relatives à l'hébergement seront complétées lors de la mise en ligne du site. L'hébergeur assure la disponibilité et la sécurité des données conformément à la législation française et européenne.
+        </p>
+      </div>
+    </section>
+
+    <section class="legal-section" id="propriete-intellectuelle">
+      <h2>4. Propriété intellectuelle</h2>
+      <p>Jardin Passion est propriétaire des droits de propriété intellectuelle ou détient les droits d'usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logos, vidéos, icônes et sons.</p>
+      <p>Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de Jardin Passion.</p>
+      <p>Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
+    </section>
+
+    <section class="legal-section" id="politique-confidentialite">
+      <h2>5. Politique de confidentialité</h2>
+      <p>La présente politique de confidentialité vous informe sur la façon dont Jardin Passion collecte, utilise et protège vos données personnelles lorsque vous utilisez notre site. Elle est conforme au Règlement Général sur la Protection des Données (RGPD – Règlement UE 2016/679) et à la loi Informatique et Libertés modifiée.</p>
+      <p>Nous nous engageons à traiter vos données personnelles avec transparence, loyauté et dans le strict respect de la réglementation applicable.</p>
+    </section>
+
+    <section class="legal-section" id="donnees-collectees">
+      <h2>6. Données personnelles collectées</h2>
+      <h3>6.1 Données collectées via le formulaire de contact</h3>
+      <p>Lorsque vous remplissez notre formulaire de contact, nous collectons :</p>
+      <ul>
+        <li>Votre prénom et nom</li>
+        <li>Votre adresse email</li>
+        <li>L'objet de votre message</li>
+        <li>Le contenu de votre message</li>
+        <li>Votre consentement à recevoir la newsletter (optionnel)</li>
+      </ul>
+      <p><strong>Finalité :</strong> répondre à votre demande et, si vous y avez consenti, vous envoyer notre newsletter.<br>
+      <strong>Base légale :</strong> exécution d'un contrat / consentement (newsletter).<br>
+      <strong>Durée de conservation :</strong> 3 ans à compter du dernier contact.</p>
+
+      <h3>6.2 Données de navigation</h3>
+      <p>Lors de votre navigation sur notre site, certaines données techniques peuvent être collectées automatiquement via des outils d'analyse d'audience (voir section Cookies ci-dessous) :</p>
+      <ul>
+        <li>Adresse IP (anonymisée)</li>
+        <li>Type de navigateur et appareil utilisé</li>
+        <li>Pages visitées, durée de la visite</li>
+        <li>Provenance du visiteur (moteur de recherche, lien direct, etc.)</li>
+      </ul>
+      <p>Ces données sont utilisées uniquement à des fins statistiques et ne permettent pas votre identification directe.</p>
+
+      <h3>6.3 Newsletter</h3>
+      <p>Si vous vous inscrivez à notre newsletter, nous collectons et conservons votre adresse email avec votre consentement explicite. Vous pouvez vous désinscrire à tout moment via le lien présent dans chaque email, sans conséquence pour l'accès au reste du site.</p>
+    </section>
+
+    <section class="legal-section" id="cookies">
+      <h2>7. Cookies et technologies similaires</h2>
+      <p>Un cookie est un fichier texte déposé sur votre terminal (ordinateur, smartphone, tablette) lors de la visite d'un site web. Il permet au site de mémoriser des informations sur votre visite.</p>
+      <h3>7.1 Types de cookies utilisés</h3>
+      <ul>
+        <li><strong>Cookies techniques :</strong> indispensables au bon fonctionnement du site (mémorisation de vos préférences, session). Ces cookies ne nécessitent pas votre consentement.</li>
+        <li><strong>Cookies analytiques :</strong> permettent de mesurer l'audience du site et d'améliorer nos contenus (ex : Google Analytics). Ces cookies sont déposés uniquement avec votre consentement.</li>
+        <li><strong>Cookies publicitaires :</strong> utilisés par nos partenaires publicitaires (notamment Google AdSense) pour diffuser des annonces personnalisées en fonction de vos centres d'intérêt. Ces cookies sont déposés uniquement avec votre consentement.</li>
+      </ul>
+      <h3>7.2 Gestion de vos préférences</h3>
+      <p>Vous pouvez à tout moment modifier vos préférences en matière de cookies depuis les paramètres de votre navigateur. La désactivation de certains cookies peut cependant altérer l'expérience de navigation ou la pertinence des publicités affichées.</p>
+      <p>Pour en savoir plus sur la gestion des cookies selon votre navigateur :</p>
+      <ul>
+        <li>Google Chrome : Paramètres → Confidentialité et sécurité → Cookies</li>
+        <li>Firefox : Options → Vie privée et sécurité</li>
+        <li>Safari : Préférences → Confidentialité</li>
+        <li>Microsoft Edge : Paramètres → Confidentialité, recherche et services</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="google-adsense">
+      <h2>8. Google AdSense et publicité ciblée</h2>
+      <p>Ce site utilise <strong>Google AdSense</strong>, un service de régie publicitaire fourni par Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.</p>
+      <p>Google AdSense utilise des cookies pour diffuser des annonces pertinentes basées sur vos visites de ce site et d'autres sites internet. Google peut utiliser les informations relatives à vos visites pour personnaliser les publicités affichées sur notre site et sur d'autres sites partenaires Google.</p>
+
+      <h3>8.1 Comment fonctionne la publicité personnalisée ?</h3>
+      <p>Google collecte certaines données via des cookies (notamment le cookie DoubleClick) pour afficher des publicités adaptées à vos centres d'intérêt. Ces données incluent vos visites de sites web, vos interactions avec des annonces et des données démographiques agrégées.</p>
+
+      <h3>8.2 Opt-out de la publicité personnalisée</h3>
+      <p>Vous pouvez désactiver la publicité personnalisée de Google de plusieurs façons :</p>
+      <ul>
+        <li>Via les <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Paramètres des annonces Google</a></li>
+        <li>Via la page <a href="https://optout.aboutads.info/" target="_blank" rel="noopener">aboutads.info</a></li>
+        <li>Via les paramètres de votre navigateur (voir section 7.2)</li>
+      </ul>
+      <p>La désactivation de la publicité personnalisée ne signifie pas que vous ne verrez plus de publicités sur notre site : vous verrez des publicités non ciblées à la place.</p>
+
+      <h3>8.3 Politique de confidentialité de Google</h3>
+      <p>Pour en savoir plus sur la façon dont Google collecte et utilise les données dans le cadre d'AdSense, consultez la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité de Google</a>.</p>
+
+      <div class="info-box">
+        <h4>⚠️ Important concernant les mineurs</h4>
+        <p>Ce site n'est pas destiné aux enfants de moins de 13 ans. Nous ne collectons pas sciemment de données personnelles concernant des mineurs. Google AdSense ne diffuse pas de publicités personnalisées aux utilisateurs pour lesquels nous avons connaissance qu'ils ont moins de 13 ans.</p>
+      </div>
+    </section>
+
+    <section class="legal-section" id="droits">
+      <h2>9. Vos droits (RGPD)</h2>
+      <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez des droits suivants sur vos données personnelles :</p>
+      <ul>
+        <li><strong>Droit d'accès :</strong> vous pouvez demander à consulter les données personnelles vous concernant que nous détenons.</li>
+        <li><strong>Droit de rectification :</strong> vous pouvez demander la correction de données inexactes ou incomplètes.</li>
+        <li><strong>Droit à l'effacement :</strong> vous pouvez demander la suppression de vos données dans les cas prévus par la loi ("droit à l'oubli").</li>
+        <li><strong>Droit à la limitation du traitement :</strong> vous pouvez demander de limiter l'utilisation de vos données dans certains cas.</li>
+        <li><strong>Droit à la portabilité :</strong> vous pouvez demander à recevoir vos données dans un format structuré et lisible par machine.</li>
+        <li><strong>Droit d'opposition :</strong> vous pouvez vous opposer au traitement de vos données, notamment à des fins de marketing direct.</li>
+        <li><strong>Droit de retirer votre consentement :</strong> lorsque le traitement est fondé sur votre consentement, vous pouvez le retirer à tout moment sans que cela affecte la licéité du traitement effectué avant le retrait.</li>
+      </ul>
+      <p>Pour exercer ces droits, contactez-nous par email à <strong>contact@guidesjardinage.fr</strong> en précisant "RGPD" dans l'objet. Nous nous engageons à répondre dans un délai maximum d'un mois.</p>
+      <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) via son site internet <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+    </section>
+
+    <section class="legal-section" id="contact-dpo">
+      <h2>10. Contact et délégué à la protection des données</h2>
+      <p>Pour toute question relative à cette politique de confidentialité, à l'exercice de vos droits, ou pour toute réclamation, vous pouvez nous contacter :</p>
+      <div class="info-box">
+        <h4>Nous contacter</h4>
+        <p>
+          <strong>Email :</strong> contact@guidesjardinage.fr<br>
+          <strong>Objet :</strong> Données personnelles / RGPD<br>
+          <strong>Délai de réponse :</strong> maximum 30 jours ouvrés
+        </p>
+      </div>
+      <p>En tant que site personnel de taille modeste, Jardin Passion n'est pas tenu de désigner formellement un délégué à la protection des données (DPO). Cependant, l'éditrice du site, Marie Jardinet, est personnellement responsable du traitement des données et peut être contactée directement via l'adresse email mentionnée ci-dessus.</p>
+
+      <h3>Modifications de cette politique</h3>
+      <p>Jardin Passion se réserve le droit de modifier la présente politique de confidentialité à tout moment. Les modifications entreront en vigueur dès leur publication sur cette page. Nous vous encourageons à consulter régulièrement cette page pour rester informé de nos pratiques en matière de protection des données.</p>
+      <p>La date de la dernière mise à jour est indiquée en haut de cette page.</p>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Jardin <span>Passion</span></a>
+      <p>Votre guide de jardinage pour cultiver avec passion, respect de la nature et plaisir au quotidien.</p>
+    </div>
+    <div>
+      <h4>Articles récents</h4>
+      <ul>
+        <li><a href="article-fruitiers.html">Arbres Fruitiers Faciles</a></li>
+        <li><a href="article-balcon.html">Potager sur Balcon</a></li>
+        <li><a href="article-lune.html">Jardiner avec la Lune</a></li>
+        <li><a href="article-rosiers.html">Taille des Rosiers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Catégories</h4>
+      <ul>
+        <li><a href="index.html#potager">Potager</a></li>
+        <li><a href="index.html#fleurs">Fleurs & Ornement</a></li>
+        <li><a href="index.html#conseils">Conseils pratiques</a></li>
+        <li><a href="index.html#ecologie">Écologie</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Informations</h4>
+      <ul>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Jardin Passion — Tous droits réservés</span>
+    <span>Fait avec 🌱 et passion</span>
+  </div>
+</footer>
+<script>
+const m=document.getElementById('menuToggle'),n=document.getElementById('navMenu');
+m.addEventListener('click',()=>n.classList.toggle('active'));
+</script>
+<script src="cookie-consent.js"></script>
+</body>
+</html>

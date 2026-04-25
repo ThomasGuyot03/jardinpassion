@@ -1,0 +1,10 @@
+# Jardin Passion — robots.txt
+
+User-agent: *
+Allow: /
+
+# Ne pas indexer les pages légales (évite le contenu dupliqué dans les SERP)
+Disallow: /mentions-legales.html
+
+# Sitemap
+Sitemap: https://www.guidesjardinage.fr/sitemap.xml

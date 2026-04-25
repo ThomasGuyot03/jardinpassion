@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Jardin Passion</title>
+<meta name="description" content="Contactez l'équipe de Jardin Passion pour vos questions de jardinage, propositions de collaboration, ou simplement pour partager votre passion du jardin !">
+<meta property="og:title" content="Contact — Jardin Passion">
+<meta property="og:description" content="Contactez l'équipe de Jardin Passion pour vos questions de jardinage ou propositions de collaboration.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--primary-color:#1a5e1a;--primary-light:#2d7a2d;--secondary-color:#3d8a3d;--accent-color:#7cb342;--accent-light:#a5d6a7;--text-primary:#2c2c2c;--text-secondary:#555;--text-light:#777;--bg-primary:#fff;--bg-secondary:#f8fdf8;--border-color:#e8f5e9;--shadow-sm:0 2px 8px rgba(26,94,26,.08);--shadow-md:0 4px 20px rgba(26,94,26,.12);--shadow-lg:0 8px 40px rgba(26,94,26,.16);--radius-sm:6px;--radius-md:12px;--radius-lg:20px;--sp4:4px;--sp8:8px;--sp12:12px;--sp16:16px;--sp24:24px;--sp32:32px;--sp48:48px;--sp64:64px;}
+body{font-family:'Inter',sans-serif;color:var(--text-primary);background:var(--bg-primary);line-height:1.7;}
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-color);box-shadow:var(--shadow-sm);}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 var(--sp24);display:flex;align-items:center;justify-content:space-between;height:70px;}
+.logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--primary-color);text-decoration:none;}
+.logo span{color:var(--accent-color);}
+nav ul{display:flex;gap:var(--sp32);list-style:none;}
+nav a{text-decoration:none;color:var(--text-secondary);font-weight:500;font-size:.95rem;transition:color .2s;}
+nav a:hover{color:var(--primary-color);}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:var(--sp8);}
+.menu-toggle span{width:24px;height:2px;background:var(--text-primary);transition:all .3s;}
+
+/* Hero */
+.contact-hero{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;padding:var(--sp64) var(--sp24);text-align:center;}
+.contact-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);margin-bottom:var(--sp16);}
+.contact-hero p{font-size:1.1rem;color:rgba(255,255,255,.9);max-width:600px;margin:0 auto;}
+
+/* Layout */
+.contact-layout{max-width:1100px;margin:0 auto;padding:var(--sp64) var(--sp24);display:grid;grid-template-columns:1fr 1.6fr;gap:var(--sp64);align-items:start;}
+
+/* Info sidebar */
+.contact-info h2{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--primary-color);margin-bottom:var(--sp32);}
+.contact-info-item{display:flex;gap:var(--sp16);margin-bottom:var(--sp32);}
+.contact-icon{width:48px;height:48px;min-width:48px;background:linear-gradient(135deg,var(--primary-color),var(--accent-color));border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.3rem;}
+.contact-info-text h3{font-size:1rem;font-weight:600;color:var(--primary-color);margin-bottom:var(--sp4);}
+.contact-info-text p{font-size:.9rem;color:var(--text-secondary);line-height:1.6;}
+
+.faq-section{margin-top:var(--sp48);}
+.faq-section h2{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--primary-color);margin-bottom:var(--sp24);}
+.faq-item{border-bottom:1px solid var(--border-color);padding:var(--sp16) 0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-question{font-weight:600;color:var(--text-primary);margin-bottom:var(--sp8);cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.faq-answer{font-size:.9rem;color:var(--text-secondary);line-height:1.7;}
+
+/* Form */
+.contact-form-wrapper{background:var(--bg-secondary);border-radius:var(--radius-lg);padding:var(--sp48);border:1px solid var(--border-color);}
+.contact-form-wrapper h2{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--primary-color);margin-bottom:var(--sp8);}
+.contact-form-wrapper .subtitle{color:var(--text-secondary);margin-bottom:var(--sp32);font-size:.95rem;}
+
+.form-group{margin-bottom:var(--sp24);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp16);}
+label{display:block;font-size:.875rem;font-weight:600;color:var(--text-primary);margin-bottom:var(--sp8);}
+label .required{color:#e53935;margin-left:var(--sp4);}
+input[type="text"],input[type="email"],select,textarea{width:100%;padding:var(--sp12) var(--sp16);border:2px solid var(--border-color);border-radius:var(--radius-sm);font-family:'Inter',sans-serif;font-size:.95rem;color:var(--text-primary);background:#fff;transition:border-color .2s,box-shadow .2s;}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent-color);box-shadow:0 0 0 3px rgba(124,179,66,.1);}
+textarea{resize:vertical;min-height:140px;line-height:1.6;}
+select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23777' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;}
+
+.checkbox-group{display:flex;align-items:flex-start;gap:var(--sp12);}
+.checkbox-group input[type="checkbox"]{width:18px;height:18px;min-width:18px;margin-top:2px;accent-color:var(--primary-color);cursor:pointer;}
+.checkbox-group label{font-size:.875rem;font-weight:400;color:var(--text-secondary);cursor:pointer;}
+.checkbox-group label a{color:var(--primary-color);}
+
+.submit-btn{width:100%;padding:var(--sp16);background:linear-gradient(135deg,var(--primary-color),var(--primary-light));color:#fff;border:none;border-radius:var(--radius-md);font-size:1rem;font-weight:600;cursor:pointer;transition:all .2s;margin-top:var(--sp16);}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
+.submit-btn:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+
+/* Success message */
+.success-message{display:none;background:linear-gradient(135deg,#e8f5e9,#f1f8e9);border:1px solid var(--accent-light);border-radius:var(--radius-lg);padding:var(--sp48);text-align:center;}
+.success-message.visible{display:block;}
+.success-icon{font-size:3rem;margin-bottom:var(--sp16);}
+.success-message h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--primary-color);margin-bottom:var(--sp12);}
+.success-message p{color:var(--text-secondary);}
+
+/* Footer */
+.footer{background:#1a1a1a;color:#ccc;padding:var(--sp64) 0 var(--sp32);}
+.footer-grid{max-width:1200px;margin:0 auto;padding:0 var(--sp24);display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp48);}
+.footer-brand .logo{color:#fff;}
+.footer-brand p{margin-top:var(--sp16);font-size:.875rem;line-height:1.7;color:#999;}
+.footer h4{color:#fff;font-size:1rem;font-weight:600;margin-bottom:var(--sp16);}
+.footer ul{list-style:none;}
+.footer ul li{margin-bottom:var(--sp8);}
+.footer ul a{color:#999;text-decoration:none;font-size:.875rem;transition:color .2s;}
+.footer ul a:hover{color:var(--accent-color);}
+.footer-bottom{max-width:1200px;margin:var(--sp48) auto 0;padding:var(--sp24) var(--sp24) 0;border-top:1px solid #333;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:#666;}
+
+@media(max-width:900px){.contact-layout{grid-template-columns:1fr;gap:var(--sp48);}}
+@media(max-width:768px){.footer-grid{grid-template-columns:repeat(2,1fr);}.menu-toggle{display:flex;}nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:var(--sp24);box-shadow:var(--shadow-md);}nav ul.active{display:flex;}.form-row{grid-template-columns:1fr;}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr;}}
+</style>
+<!-- ⚠️ REMPLACEZ ca-pub-XXXXXXXXXXXXXXXX par votre ID éditeur AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Jardin <span>Passion</span></a>
+    <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    <nav><ul id="navMenu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#potager">Potager</a></li>
+      <li><a href="index.html#fleurs">Fleurs</a></li>
+      <li><a href="index.html#conseils">Conseils</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<section class="contact-hero">
+  <h1>Contactez-nous 🌿</h1>
+  <p>Une question sur le jardinage, une idée d'article, une proposition de collaboration ? L'équipe de Jardin Passion vous répond avec plaisir !</p>
+</section>
+
+<div class="contact-layout">
+  <div class="contact-info">
+    <h2>Nous joindre</h2>
+
+    <div class="contact-info-item">
+      <div class="contact-icon">📧</div>
+      <div class="contact-info-text">
+        <h3>Email</h3>
+        <p>contact@guidesjardinage.fr<br>Réponse sous 48h ouvrées</p>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="contact-icon">📍</div>
+      <div class="contact-info-text">
+        <h3>Localisation</h3>
+        <p>Bourgogne, France<br>Blog 100% en ligne</p>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="contact-icon">🕐</div>
+      <div class="contact-info-text">
+        <h3>Délai de réponse</h3>
+        <p>Nous répondons à tous les messages dans les 48 heures (hors week-end et jours fériés).</p>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="contact-icon">🤝</div>
+      <div class="contact-info-text">
+        <h3>Partenariats</h3>
+        <p>Vous souhaitez collaborer avec Jardin Passion ? Utilisez le formulaire en précisant "Partenariat" dans l'objet.</p>
+      </div>
+    </div>
+
+    <div class="faq-section">
+      <h2>Questions fréquentes</h2>
+      <div class="faq-item">
+        <div class="faq-question">Proposez-vous des consultations personnalisées ?</div>
+        <p class="faq-answer">Nous ne proposons pas de consultations individuelles payantes, mais nos articles couvrent la grande majorité des situations courantes. N'hésitez pas à nous soumettre votre question via le formulaire !</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Puis-je proposer un article invité ?</div>
+        <p class="faq-answer">Oui ! Nous sommes ouverts aux contributions d'experts en jardinage. Envoyez-nous un résumé de votre sujet et votre profil via le formulaire.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Comment m'abonner à la newsletter ?</div>
+        <p class="faq-answer">Vous pouvez vous inscrire à notre newsletter depuis le formulaire présent dans la barre latérale de chacun de nos articles.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="contact-form-wrapper" id="formWrapper">
+      <h2>Envoyez-nous un message</h2>
+      <p class="subtitle">Tous les champs marqués d'un astérisque (*) sont obligatoires.</p>
+
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">Prénom <span class="required">*</span></label>
+            <input type="text" id="firstName" name="firstName" placeholder="Marie" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Nom <span class="required">*</span></label>
+            <input type="text" id="lastName" name="lastName" placeholder="Dupont" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Adresse email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="marie.dupont@exemple.fr" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Objet de votre message <span class="required">*</span></label>
+          <select id="subject" name="subject" required>
+            <option value="">Sélectionnez un objet...</option>
+            <option value="question">Question jardinage</option>
+            <option value="suggestion">Suggestion d'article</option>
+            <option value="partenariat">Partenariat / collaboration</option>
+            <option value="presse">Contact presse</option>
+            <option value="correction">Erreur dans un article</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Votre message <span class="required">*</span></label>
+          <textarea id="message" name="message" placeholder="Décrivez votre demande en détail. Plus vous nous donnez de contexte, mieux nous pourrons vous aider !" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-group">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <label for="privacy">J'accepte que mes données personnelles soient traitées conformément à la <a href="mentions-legales.html">politique de confidentialité</a> de Jardin Passion. <span class="required">*</span></label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-group">
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Je souhaite recevoir la newsletter de Jardin Passion (conseils jardinage hebdomadaires, gratuit, désinscription facile)</label>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Envoyer mon message ✉️</button>
+      </form>
+    </div>
+
+    <div class="success-message" id="successMessage">
+      <div class="success-icon">🌱</div>
+      <h3>Message envoyé avec succès !</h3>
+      <p>Merci pour votre message. L'équipe de Jardin Passion vous répondra dans les 48 heures ouvrées. En attendant, pourquoi ne pas explorer nos derniers articles ?</p>
+      <br>
+      <a href="index.html" style="display:inline-block;margin-top:16px;padding:12px 24px;background:var(--primary-color);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;">Retour aux articles →</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Jardin <span>Passion</span></a>
+      <p>Votre guide de jardinage pour cultiver avec passion, respect de la nature et plaisir au quotidien.</p>
+    </div>
+    <div>
+      <h4>Articles récents</h4>
+      <ul>
+        <li><a href="article-fruitiers.html">Arbres Fruitiers Faciles</a></li>
+        <li><a href="article-balcon.html">Potager sur Balcon</a></li>
+        <li><a href="article-lune.html">Jardiner avec la Lune</a></li>
+        <li><a href="article-rosiers.html">Taille des Rosiers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Catégories</h4>
+      <ul>
+        <li><a href="index.html#potager">Potager</a></li>
+        <li><a href="index.html#fleurs">Fleurs & Ornement</a></li>
+        <li><a href="index.html#conseils">Conseils pratiques</a></li>
+        <li><a href="index.html#ecologie">Écologie</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Informations</h4>
+      <ul>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Jardin Passion — Tous droits réservés</span>
+    <span>Fait avec 🌱 et passion</span>
+  </div>
+</footer>
+
+<script>
+const m=document.getElementById('menuToggle'),n=document.getElementById('navMenu');
+m.addEventListener('click',()=>n.classList.toggle('active'));
+
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const firstName=document.getElementById('firstName').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const subject=document.getElementById('subject').value;
+  const message=document.getElementById('message').value.trim();
+  const privacy=document.getElementById('privacy').checked;
+
+  if(!firstName||!email||!subject||!message||!privacy){
+    alert('Veuillez remplir tous les champs obligatoires et accepter la politique de confidentialité.');
+    return;
+  }
+
+  const btn=document.getElementById('submitBtn');
+  btn.disabled=true;
+  btn.textContent='Envoi en cours...';
+
+  setTimeout(()=>{
+    document.getElementById('formWrapper').style.display='none';
+    document.getElementById('successMessage').classList.add('visible');
+    window.scrollTo({top:document.getElementById('successMessage').offsetTop-100,behavior:'smooth'});
+  },1200);
+});
+</script>
+<script src="cookie-consent.js"></script>
+</body>
+</html>

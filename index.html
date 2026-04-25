@@ -1,0 +1,2150 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('jp_theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Votre guide complet pour réussir votre jardin : conseils, astuces et techniques de jardinage" />
+    <title>Jardin Passion - Blog de Jardinage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+
+<style>
+      :root {
+  --color-primary: #2d5016;
+  --color-primary-light: #3d6b1f;
+  --color-primary-dark: #1d3a0d;
+  --color-accent: #7ba05b;
+  --color-accent-light: #9bc178;
+
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-tertiary: #737373;
+
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8f9fa;
+  --color-bg-tertiary: #f3f4f6;
+
+  --color-border: #e5e7eb;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+}
+
+[data-theme="dark"] {
+  --color-primary: #5a9e3d;
+  --color-primary-light: #6db850;
+  --color-primary-dark: #4a8a30;
+  --color-accent: #8fbf5a;
+  --color-accent-light: #b0d47a;
+
+  --color-text-primary: #e4f0e4;
+  --color-text-secondary: #a8c4a8;
+  --color-text-tertiary: #7a9e7a;
+
+  --color-bg-primary: #0d1a0d;
+  --color-bg-secondary: #152015;
+  --color-bg-tertiary: #1d2e1d;
+
+  --color-border: #2a3d2a;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.header {
+  background: var(--color-bg-primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(10px);
+  transition: var(--transition-base);
+}
+
+.header.scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.logo-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  position: relative;
+  padding: 0.5rem 0;
+  transition: var(--transition-base);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width var(--transition-base);
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 2px;
+  background: var(--color-primary);
+  transition: var(--transition-base);
+  border-radius: 2px;
+}
+
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all var(--transition-fast);
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+.theme-toggle:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-bg-secondary);
+}
+
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  color: #fff;
+  text-align: center;
+  padding: 8rem 2rem 10rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("https://images.pexels.com/photos/296230/pexels-photo-296230.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(29, 58, 13, 0.4) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #fff;
+  color: var(--color-primary);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-base);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button svg {
+  transition: transform var(--transition-base);
+}
+
+.cta-button:hover svg {
+  transform: translateX(4px);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.scroll-indicator {
+  width: 2px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-indicator::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: #fff;
+  animation: scrollDown 2s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+  0%, 100% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.articles-section {
+  padding: var(--spacing-3xl) 0;
+  background: var(--color-bg-secondary);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--color-accent-light);
+  color: var(--color-primary-dark);
+  border-radius: 50px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-badge.light {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.search-wrapper {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
+}
+.search-wrapper svg {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+.search-input {
+  width: 100%;
+  padding: 0.7rem 1rem 0.7rem 2.8rem;
+  border: 2px solid var(--color-border);
+  border-radius: 2rem;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.search-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(26,94,26,0.12);
+}
+.search-input::placeholder { color: var(--color-text-secondary); }
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+.filter-btn {
+  padding: 0.45rem 1.1rem;
+  border: 2px solid var(--color-border);
+  border-radius: 2rem;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: inherit;
+}
+.filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-bg-secondary);
+}
+.filter-btn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+.article-card.hidden {
+  display: none;
+}
+.filter-no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-secondary);
+}
+.filter-no-results p { margin: 0; font-size: 1.1rem; }
+.load-more-wrapper {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.btn-load-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2.25rem;
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  border-radius: 2rem;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.btn-load-more:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+.btn-load-more:disabled {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
+.article-card {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 12px var(--color-shadow);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.article-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+}
+
+.article-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.article-card:hover .article-image {
+  transform: scale(1.08);
+}
+
+.article-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  color: var(--color-primary);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 1;
+}
+
+.article-badge.featured {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.article-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-tertiary);
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.meta-item svg {
+  opacity: 0.6;
+}
+
+.article-title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
+}
+
+.article-excerpt {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.article-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 0.9375rem;
+  transition: var(--transition-base);
+}
+
+.article-link:hover {
+  gap: 0.75rem;
+  color: var(--color-primary-light);
+}
+
+.article-link svg {
+  transition: transform var(--transition-base);
+}
+
+.article-link:hover svg {
+  transform: translateX(4px);
+}
+
+.article-featured {
+  grid-column: span 1;
+}
+
+/* Featured section */
+.featured-section {
+  padding: var(--spacing-3xl) 0;
+  background: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 1.5rem;
+}
+.featured-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--color-bg-secondary);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+}
+.featured-card-main {
+  grid-column: span 2;
+}
+.featured-card-img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.featured-card-main .featured-card-img { height: 320px; }
+.featured-card:not(.featured-card-main) .featured-card-img { height: 180px; }
+.featured-card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+.featured-label {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.2rem 0.65rem;
+  border-radius: 1rem;
+  margin-bottom: 0.75rem;
+}
+.featured-card-main .featured-label {
+  background: var(--color-accent);
+}
+.featured-card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+.featured-card-main .featured-card-title { font-size: 1.6rem; }
+.featured-card-excerpt {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.featured-card-meta {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+@media (max-width: 768px) {
+  .featured-grid { grid-template-columns: 1fr; }
+  .featured-card-main { grid-column: span 1; }
+  .featured-card-main .featured-card-img { height: 220px; }
+  .featured-card:not(.featured-card-main) .featured-card-img { height: 160px; }
+}
+
+.tips-section {
+  background: linear-gradient(135deg, #f0f7eb 0%, #e8f3e1 100%);
+  padding: var(--spacing-3xl) 0;
+}
+[data-theme="dark"] .tips-section {
+  background: linear-gradient(135deg, #152015 0%, #1d2e1d 100%);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.75rem;
+}
+
+.tip-card {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: all var(--transition-base);
+  border: 1px solid rgba(125, 160, 91, 0.1);
+}
+
+.tip-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-accent-light);
+}
+
+.tip-icon-wrapper {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.25rem;
+  background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(125, 160, 91, 0.2);
+  transition: transform var(--transition-base);
+}
+
+.tip-card:hover .tip-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.tip-icon {
+  font-size: 2rem;
+}
+
+.tip-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
+}
+
+.tip-card p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.newsletter-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: #fff;
+  padding: var(--spacing-3xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.newsletter-section::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.newsletter-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter-content {
+  margin-bottom: 2.5rem;
+}
+
+.newsletter-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.newsletter-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  opacity: 0.95;
+  font-weight: 300;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-group input {
+  flex: 1;
+  padding: 0.875rem 1.5rem;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  font-family: var(--font-primary);
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  color: var(--color-primary);
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-base);
+  font-family: var(--font-primary);
+  white-space: nowrap;
+}
+
+.submit-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button svg {
+  transition: transform var(--transition-base);
+}
+
+.submit-button:hover svg {
+  transform: translateX(4px);
+}
+
+.form-notice {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+.footer {
+  background: var(--color-primary-dark);
+  color: rgba(255, 255, 255, 0.8);
+  padding: var(--spacing-2xl) 0 var(--spacing-md);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.footer-about {
+  max-width: 320px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.375rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-logo .logo-icon {
+  font-size: 1.5rem;
+}
+
+.footer-logo .logo-text {
+  font-family: var(--font-display);
+}
+
+.footer-about p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #fff;
+  transition: all var(--transition-base);
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.footer-section h4 {
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.footer-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-section ul li a {
+  font-size: 0.9375rem;
+  transition: var(--transition-base);
+  display: inline-block;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--spacing-md);
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all var(--transition-base);
+  z-index: 999;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .articles-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-about {
+    grid-column: span 2;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg-primary);
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .hero {
+    padding: 5rem 1.5rem 7rem;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-featured {
+    grid-column: span 1;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    flex-direction: column;
+    border-radius: var(--radius-md);
+    padding: 1rem;
+  }
+
+  .submit-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-about {
+    grid-column: span 1;
+  }
+
+  .scroll-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+  }
+
+  .nav-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .article-title {
+    font-size: 1.25rem;
+  }
+
+  /* Filter bar : scroll horizontal sur mobile */
+  .filter-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .filter-btn { flex-shrink: 0; }
+}
+
+/* ─── Dark mode overrides for hardcoded colours ─── */
+[data-theme="dark"] .header {
+  background: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+[data-theme="dark"] .article-card {
+  background: var(--color-bg-tertiary);
+}
+[data-theme="dark"] .article-badge {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+[data-theme="dark"] .search-input {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+[data-theme="dark"] .filter-btn {
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+[data-theme="dark"] .filter-btn:hover {
+  background: var(--color-bg-tertiary);
+}
+[data-theme="dark"] .featured-card {
+  background: var(--color-bg-tertiary);
+}
+[data-theme="dark"] .featured-card-title {
+  color: var(--color-text-primary);
+}
+[data-theme="dark"] .tip-card {
+  background: var(--color-bg-tertiary);
+  border-color: var(--color-border);
+}
+[data-theme="dark"] .articles-section {
+  background: var(--color-bg-secondary);
+}
+[data-theme="dark"] .footer {
+  background: #040d04;
+}
+/* smooth transitions on key elements */
+.header, .article-card, .tip-card, .featured-card,
+.search-input, .filter-btn, .articles-section {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+</style>
+
+<!-- ⚠️ REMPLACEZ ca-pub-XXXXXXXXXXXXXXXX par votre ID éditeur AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">🌿</span>
+          <span class="logo-text">Jardin Passion</span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#accueil" class="nav-link">Accueil</a></li>
+          <li><a href="#articles" class="nav-link">Articles</a></li>
+          <li><a href="#conseils" class="nav-link">Conseils</a></li>
+          <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Basculer le mode sombre" title="Mode sombre">☀️</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="accueil" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <span class="hero-badge">Bienvenue</span>
+          <h1 class="hero-title">Cultivez Votre Passion du Jardinage</h1>
+          <p class="hero-subtitle">Découvrez tous nos conseils pour créer et entretenir un jardin magnifique toute l'année</p>
+          <a href="#articles" class="cta-button">
+            <span>Découvrir nos articles</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <div class="hero-scroll">
+          <span>Scroll</span>
+          <div class="scroll-indicator"></div>
+        </div>
+      </section>
+
+      <section class="featured-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">À la une</span>
+            <h2 class="section-title">Articles à la Une</h2>
+            <p class="section-subtitle">Nos guides les plus complets pour bien jardiner</p>
+          </div>
+          <div class="featured-grid">
+            <a href="article-rosiers.html" class="featured-card featured-card-main">
+              <img src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Rosiers en fleurs" class="featured-card-img" loading="lazy">
+              <div class="featured-card-body">
+                <span class="featured-label">À la une</span>
+                <h3 class="featured-card-title">Taille des Rosiers : Quand et Comment Bien Tailler ?</h3>
+                <p class="featured-card-excerpt">Guide complet pour tailler vos rosiers selon les variétés, avec le calendrier idéal et les techniques professionnelles.</p>
+                <span class="featured-card-meta">Fleurs &bull; 15 jan. 2026 &bull; 8 min</span>
+              </div>
+            </a>
+            <a href="article-semis.html" class="featured-card">
+              <img src="https://images.pexels.com/photos/4505166/pexels-photo-4505166.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Semis en godets" class="featured-card-img" loading="lazy">
+              <div class="featured-card-body">
+                <span class="featured-label">Jardinage</span>
+                <h3 class="featured-card-title">Réussir ses Semis en Intérieur</h3>
+                <p class="featured-card-excerpt">Substrat, luminosité, repiquage… tout ce qu'il faut savoir pour démarrer vos plants.</p>
+                <span class="featured-card-meta">1 fév. 2026 &bull; 9 min</span>
+              </div>
+            </a>
+            <a href="article-engrais.html" class="featured-card">
+              <img src="https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Jardin potager sain" class="featured-card-img" loading="lazy">
+              <div class="featured-card-body">
+                <span class="featured-label">Écologie</span>
+                <h3 class="featured-card-title">Engrais Naturels Maison</h3>
+                <p class="featured-card-excerpt">Purin d'ortie, compost, cendre de bois… fertilisez votre jardin sans produits chimiques.</p>
+                <span class="featured-card-meta">5 fév. 2026 &bull; 7 min</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="articles" class="articles-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Blog</span>
+            <h2 class="section-title">Derniers Articles</h2>
+            <p class="section-subtitle">Explorez nos guides et conseils pour jardiner comme un pro</p>
+          </div>
+
+          <div class="search-wrapper">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="searchInput" class="search-input" placeholder="Rechercher un article…" aria-label="Rechercher un article">
+          </div>
+
+          <div class="filter-bar" id="filterBar" role="group" aria-label="Filtrer par catégorie">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="potager">Potager</button>
+            <button class="filter-btn" data-filter="fleurs">Fleurs</button>
+            <button class="filter-btn" data-filter="saison">Saisons</button>
+            <button class="filter-btn" data-filter="jardinage">Jardinage</button>
+            <button class="filter-btn" data-filter="entretien">Entretien</button>
+            <button class="filter-btn" data-filter="arbres">Arbres</button>
+            <button class="filter-btn" data-filter="ecologie">Écologie</button>
+            <button class="filter-btn" data-filter="techniques">Techniques</button>
+            <button class="filter-btn" data-filter="guides">Guides</button>
+          </div>
+
+          <div class="articles-grid" id="articlesGrid">
+            <article class="article-card" data-category="potager">
+              <a href="/article.html" class="article-card-link" aria-label="Lire l'article Jardiner Bio">
+                
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Potager</span>
+                </div>
+
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                      5 min
+                    </span>
+                    <span class="meta-item">12 Mars 2025</span>
+                  </div>
+
+                  <h3 class="article-title">
+                    10 Légumes Faciles à Cultiver pour Débutants
+                  </h3>
+
+                  <p class="article-excerpt">
+                    Un guide pratique pour débuter au potager avec 10 légumes faciles à cultiver. Conseils simples, variétés résistantes et premières récoltes garanties.
+                  </p>
+
+                  <span class="article-link">
+                    Lire l'article →
+                  </span>
+                </div>
+
+              </a>
+            </article>
+
+            <article class="article-card" data-category="fleurs">
+              <div class="article-image-wrapper">
+                <div class="article-image" style="background-image: url('https://images.pexels.com/photos/1084199/pexels-photo-1084199.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                <span class="article-badge">Fleurs</span>
+              </div>
+              <div class="article-content">
+                <div class="article-meta">
+                  <span class="meta-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/>
+                      <path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    7 min
+                  </span>
+                  <span class="meta-item">10 Mars 2025</span>
+                </div>
+                <h3 class="article-title">Comment Créer un Massif de Fleurs Coloré</h3>
+                <p class="article-excerpt">Apprenez à composer un massif harmonieux qui fleurira du printemps à l'automne avec style.</p>
+                <a href="#" class="article-link">
+                  <span>Lire l'article</span>
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="article-card" data-category="entretien">
+              <a href="/article-trois.html" class="article-card-link" aria-label="Lire l'article Le Compostage : Guide Complet du Débutant">
+
+                <div class="article-image-wrapper">
+                  <div
+                    class="article-image" style="background-image: url('https://images.pexels.com/photos/169523/pexels-photo-169523.jpeg?auto=compress&cs=tinysrgb&w=800')">
+                  </div>
+                  <span class="article-badge">Entretien</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                          stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 4V8L10.5 9.5"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                      6 min
+                    </span>
+                    <span class="meta-item">8 Mars 2025</span>
+                  </div>
+                  <h3 class="article-title">
+                    Le Compostage : Guide Complet du Débutant
+                  </h3>
+                  <p class="article-excerpt">
+                    Transformez vos déchets verts en or noir pour enrichir naturellement votre sol et vos plantations.
+                  </p>
+                  <span class="article-link">
+                    Lire l'article →
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <a href="article-quatre.html" class="article-card-link">
+            <article class="article-card" data-category="saison">
+              <div class="article-image-wrapper">
+                <div
+                  class="article-image"
+                  style="background-image: url('https://images.pexels.com/photos/1214259/pexels-photo-1214259.jpeg?auto=compress&cs=tinysrgb&w=800')">
+                </div>
+                <span class="article-badge">Saison</span>
+              </div>
+              <div class="article-content">
+                <div class="article-meta">
+                  <span class="meta-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/>
+                      <path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    8 min
+                  </span>
+                  <span class="meta-item">5 Mars 2025</span>
+                </div>
+                <h3 class="article-title">Préparer son Jardin pour l'Hiver</h3>
+                <p class="article-excerpt">
+                  Tous les gestes essentiels pour protéger vos plantes et préparer le terrain pour le printemps.
+                </p>
+                <span class="article-link">
+                  <span>Lire l'article</span>
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </article>
+            </a>
+
+
+            <article class="article-card" data-category="guides">
+              <div class="article-image-wrapper">
+                <div class="article-image" style="background-image: url('https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                <span class="article-badge">Guides</span>
+              </div>
+              <div class="article-content">
+                <div class="article-meta">
+                  <span class="meta-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/>
+                      <path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    4 min
+                  </span>
+                  <span class="meta-item">3 Mars 2025</span>
+                </div>
+                <h3 class="article-title">Les Outils Indispensables du Jardinier</h3>
+                <p class="article-excerpt">Découvrez la liste des outils essentiels pour entretenir efficacement votre jardin toute l'année.</p>
+                <a href="#" class="article-link">
+                  <span>Lire l'article</span>
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="article-card article-featured" data-category="guides">
+              <a href="article-six.html"
+                class="article-card-link"
+                aria-label="Lire l'article Démarrer un Potager : Le Guide Ultime">
+                <div class="article-image-wrapper">
+                  <div class="article-image"
+                      style="background-image: url('https://images.pexels.com/photos/296230/pexels-photo-296230.jpeg?auto=compress&cs=tinysrgb&w=800')">
+                  </div>
+                  <span class="article-badge featured">Guide Complet</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                              stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 4V8L10.5 9.5"
+                              stroke="currentColor" stroke-width="1.5"
+                              stroke-linecap="round"/>
+                      </svg>
+                      12 min
+                    </span>
+                    <span class="meta-item">1 Mars 2025</span>
+                  </div>
+                  <h3 class="article-title">
+                    Démarrer un Potager : Le Guide Ultime
+                  </h3>
+                  <p class="article-excerpt">
+                    De la préparation du sol aux premières récoltes, tout ce qu'il faut savoir pour créer votre potager.
+                  </p>
+                  <span class="article-link">
+                    Lire l'article
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M6.75 13.5L11.25 9L6.75 4.5"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="fleurs">
+              <a href="article-rosiers.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Fleurs</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 8 min</span>
+                    <span class="meta-item">15 Jan 2026</span>
+                  </div>
+                  <h3 class="article-title">Taille des Rosiers : Quand et Comment Bien Tailler ?</h3>
+                  <p class="article-excerpt">Apprenez à tailler vos rosiers au bon moment avec les bonnes techniques pour une floraison abondante.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="potager">
+              <a href="article-aromatiques.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/906150/pexels-photo-906150.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Potager</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 7 min</span>
+                    <span class="meta-item">20 Jan 2026</span>
+                  </div>
+                  <h3 class="article-title">Plantes Aromatiques : Les Meilleures à Cultiver Chez Soi</h3>
+                  <p class="article-excerpt">Basilic, menthe, thym, persil... Tout savoir pour cultiver vos herbes aromatiques avec succès.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="potager">
+              <a href="article-arrosage.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/1268101/pexels-photo-1268101.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Potager</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 8 min</span>
+                    <span class="meta-item">25 Jan 2026</span>
+                  </div>
+                  <h3 class="article-title">Arrosage au Potager : Les Erreurs à Éviter Absolument</h3>
+                  <p class="article-excerpt">Évitez les 7 erreurs d'arrosage les plus fréquentes pour un potager sain et productif.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="jardinage">
+              <a href="article-semis.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Jardinage</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 9 min</span>
+                    <span class="meta-item">1 Fév 2026</span>
+                  </div>
+                  <h3 class="article-title">Réussir ses Semis en Intérieur : Guide Pas à Pas</h3>
+                  <p class="article-excerpt">Matériel, substrat, technique et calendrier : tout pour réussir vos semis sous abri dès le départ.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="ecologie">
+              <a href="article-engrais.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/1459505/pexels-photo-1459505.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Écologie</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 8 min</span>
+                    <span class="meta-item">5 Fév 2026</span>
+                  </div>
+                  <h3 class="article-title">Engrais Naturels Maison : Les Alternatives Bio</h3>
+                  <p class="article-excerpt">Purin d'ortie, compost, cendres, marc de café... Fabriquez vos engrais naturels et nourrissez vos plantes bio.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="fleurs">
+              <a href="article-fleurs.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Fleurs</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 9 min</span>
+                    <span class="meta-item">10 Fév 2026</span>
+                  </div>
+                  <h3 class="article-title">Créer un Jardin Fleuri Toute l'Année</h3>
+                  <p class="article-excerpt">Bulbes de printemps, vivaces d'été, asters d'automne... La stratégie pour ne jamais manquer de fleurs.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="jardinage">
+              <a href="article-nuisibles.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/1459505/pexels-photo-1459505.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Jardinage</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 10 min</span>
+                    <span class="meta-item">15 Fév 2026</span>
+                  </div>
+                  <h3 class="article-title">Lutte Naturelle Contre les Nuisibles du Jardin</h3>
+                  <p class="article-excerpt">Pucerons, limaces, chenilles... Combattez les ravageurs efficacement sans produits chimiques.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="jardinage">
+              <a href="article-lune.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/1252869/pexels-photo-1252869.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Jardinage</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 8 min</span>
+                    <span class="meta-item">20 Fév 2026</span>
+                  </div>
+                  <h3 class="article-title">Jardiner avec la Lune : Calendrier Lunaire du Jardinier</h3>
+                  <p class="article-excerpt">Jours racine, feuille, fleur ou fruit — utilisez le calendrier lunaire pour optimiser vos semis et récoltes.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="potager">
+              <a href="article-balcon.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/1084540/pexels-photo-1084540.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Potager</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 9 min</span>
+                    <span class="meta-item">25 Fév 2026</span>
+                  </div>
+                  <h3 class="article-title">Aménager un Balcon en Potager : Cultiver des Légumes en Bac</h3>
+                  <p class="article-excerpt">Pas de jardin ? Transformez votre balcon en potager productif avec les bonnes techniques et les bonnes plantes.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="arbres">
+              <a href="article-fruitiers.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/1458694/pexels-photo-1458694.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Arbres & Arbustes</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 10 min</span>
+                    <span class="meta-item">1 Mars 2026</span>
+                  </div>
+                  <h3 class="article-title">Arbres Fruitiers Faciles : Lesquels Planter et Comment les Entretenir ?</h3>
+                  <p class="article-excerpt">Pommier, cerisier, figuier, prunier... Guide complet pour choisir, planter et entretenir vos fruitiers.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="saison">
+              <a href="article-avril.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Saisonnier</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 12 min</span>
+                    <span class="meta-item">13 Avril 2026</span>
+                  </div>
+                  <h3 class="article-title">Que Faire au Jardin en Avril : Le Guide Complet</h3>
+                  <p class="article-excerpt">Semis, plantations, taille des rosiers, entretien du potager, lutte contre les nuisibles... Tous les travaux d'avril en un seul guide.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="potager">
+              <a href="article-carres.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Potager</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 13 min</span>
+                    <span class="meta-item">20 Avril 2026</span>
+                  </div>
+                  <h3 class="article-title">Potager en Carrés : Guide Complet pour Débutants</h3>
+                  <p class="article-excerpt">Construire son bac, choisir le bon mélange de terre, densités de plantation, associations et rotation des cultures. Tout pour démarrer sans erreur.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="saison">
+              <a href="article-mai.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Saisonnier</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 11 min</span>
+                    <span class="meta-item">1er Mai 2026</span>
+                  </div>
+                  <h3 class="article-title">Que Planter en Mai : Guide Complet + Saints de Glace</h3>
+                  <p class="article-excerpt">Tomates, courges, haricots... Tout ce qu'on peut planter en mai, les Saints de Glace expliqués et le calendrier de plantation semaine par semaine.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="techniques">
+              <a href="article-bouturage.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/4750274/pexels-photo-4750274.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Techniques</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 14 min</span>
+                    <span class="meta-item">27 Avril 2026</span>
+                  </div>
+                  <h3 class="article-title">Bouturage des Plantes : Toutes les Techniques</h3>
+                  <p class="article-excerpt">Bouture de tige, en eau, de feuille, marcottage aérien... Toutes les méthodes pour multiplier vos plantes gratuitement, avec le calendrier selon la saison.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="guides">
+              <a href="article-compost.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/5029039/pexels-photo-5029039.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Guides</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 14 min</span>
+                    <span class="meta-item">14 Avril 2026</span>
+                  </div>
+                  <h3 class="article-title">Compost Maison : Guide Complet pour Débutants</h3>
+                  <p class="article-excerpt">Choisir son composteur, quels déchets accepter, les 3 étapes de la décomposition, problèmes courants et comment utiliser le compost mûr.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="guides">
+              <a href="article-taille.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/5765826/pexels-photo-5765826.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Guides</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 13 min</span>
+                    <span class="meta-item">14 Avril 2026</span>
+                  </div>
+                  <h3 class="article-title">Tailler ses Arbustes : Quand et Comment</h3>
+                  <p class="article-excerpt">La règle d'or avant ou après floraison, les bons outils, le calendrier par espèce (forsythia, buddleia, hortensia, lavande) et la taille de rajeunissement.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="article-card" data-category="guides">
+              <a href="article-paillage.html" class="article-card-link">
+                <div class="article-image-wrapper">
+                  <div class="article-image" style="background-image: url('https://images.pexels.com/photos/296230/pexels-photo-296230.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+                  <span class="article-badge">Guides</span>
+                </div>
+                <div class="article-content">
+                  <div class="article-meta">
+                    <span class="meta-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> 12 min</span>
+                    <span class="meta-item">14 Avril 2026</span>
+                  </div>
+                  <h3 class="article-title">Le Paillage au Jardin : Guide Complet</h3>
+                  <p class="article-excerpt">Paille, BRF, copeaux, gravier... Quel paillis choisir selon la culture, comment bien le poser et comment en obtenir gratuitement.</p>
+                  <span class="article-link">Lire l'article →</span>
+                </div>
+              </a>
+            </article>
+
+          </div>
+
+          <div class="load-more-wrapper" id="loadMoreWrapper">
+            <button class="btn-load-more" id="loadMoreBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              Voir plus d'articles
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="conseils" class="tips-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Pratique</span>
+            <h2 class="section-title">Conseils du Moment</h2>
+            <p class="section-subtitle">Les bons gestes à adopter selon la saison</p>
+          </div>
+
+          <div class="tips-grid">
+            <div class="tip-card">
+              <div class="tip-icon-wrapper">
+                <div class="tip-icon">🌱</div>
+              </div>
+              <h3>Semis</h3>
+              <p>Le meilleur moment pour semer vos tomates est entre mars et avril sous abri chauffé.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon-wrapper">
+                <div class="tip-icon">💧</div>
+              </div>
+              <h3>Arrosage</h3>
+              <p>Arrosez le matin ou le soir pour éviter l'évaporation et économiser l'eau efficacement.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon-wrapper">
+                <div class="tip-icon">✂️</div>
+              </div>
+              <h3>Taille</h3>
+              <p>Taillez vos rosiers en février-mars pour favoriser une belle floraison estivale abondante.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon-wrapper">
+                <div class="tip-icon">🐛</div>
+              </div>
+              <h3>Protection</h3>
+              <p>Utilisez des purins naturels pour protéger vos plantes des parasites sans produits chimiques.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="newsletter-section">
+        <div class="container">
+          <div class="newsletter-wrapper">
+            <div class="newsletter-content">
+              <span class="section-badge light">Newsletter</span>
+              <h2 class="newsletter-title">Restez Informé</h2>
+              <p class="newsletter-subtitle">Recevez nos meilleurs conseils et articles directement dans votre boîte mail chaque semaine</p>
+            </div>
+            <form class="newsletter-form" id="newsletterForm">
+              <div class="form-group">
+                <input type="email" placeholder="Votre adresse email" required>
+                <button type="submit" class="submit-button">
+                  <span>S'inscrire</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+              <p class="form-notice">Pas de spam, désinscription facile à tout moment</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section footer-about">
+            <div class="footer-logo">
+              <span class="logo-icon">🌿</span>
+              <span class="logo-text">Jardin Passion</span>
+            </div>
+            <p>Votre guide complet pour réussir votre jardin et cultiver votre passion du jardinage au quotidien.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M20 10C20 4.477 15.523 0 10 0S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"/>
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 0C7.284 0 6.944.012 5.877.06 4.813.11 4.086.278 3.45.525a4.947 4.947 0 00-1.788 1.163A4.947 4.947 0 00.525 3.45C.278 4.086.109 4.813.06 5.877.012 6.944 0 7.284 0 10s.012 3.056.06 4.123c.05 1.064.218 1.791.465 2.427a4.947 4.947 0 001.163 1.788 4.947 4.947 0 001.788 1.163c.636.247 1.363.415 2.427.465C6.944 19.988 7.284 20 10 20s3.056-.012 4.123-.06c1.064-.05 1.791-.218 2.427-.465a4.947 4.947 0 001.788-1.163 4.947 4.947 0 001.163-1.788c.247-.636.415-1.363.465-2.427.048-1.067.06-1.407.06-4.123s-.012-3.056-.06-4.123c-.05-1.064-.218-1.791-.465-2.427a4.947 4.947 0 00-1.163-1.788A4.947 4.947 0 0016.55.525C15.914.278 15.187.109 14.123.06 13.056.012 12.716 0 10 0zm0 1.802c2.67 0 2.986.01 4.04.058.975.045 1.504.207 1.857.344.466.181.8.398 1.15.748.35.35.567.684.748 1.15.137.353.3.882.344 1.857.048 1.054.058 1.37.058 4.04s-.01 2.986-.058 4.04c-.045.975-.207 1.504-.344 1.857-.181.466-.398.8-.748 1.15-.35.35-.684.567-1.15.748-.353.137-.882.3-1.857.344-1.054.048-1.37.058-4.04.058s-2.986-.01-4.04-.058c-.975-.045-1.504-.207-1.857-.344a3.097 3.097 0 01-1.15-.748 3.097 3.097 0 01-.748-1.15c-.137-.353-.3-.882-.344-1.857-.048-1.054-.058-1.37-.058-4.04s.01-2.986.058-4.04c.045-.975.207-1.504.344-1.857.181-.466.398-.8.748-1.15.35-.35.684-.567 1.15-.748.353-.137.882-.3 1.857-.344 1.054-.048 1.37-.058 4.04-.058z"/>
+                  <path d="M10 13.333a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm0-8.468a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm6.538-.203a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/>
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Pinterest">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 0C4.477 0 0 4.477 0 10c0 4.237 2.636 7.855 6.356 9.312-.088-.79-.167-2.005.035-2.868.182-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.852 0 1.264.64 1.264 1.408 0 .858-.546 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.744 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.335.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S15.523 0 10 0z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#accueil">Accueil</a></li>
+              <li><a href="#articles">Articles</a></li>
+              <li><a href="#conseils">Conseils</a></li>
+              <li><a href="a-propos.html">À propos</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Articles récents</h4>
+            <ul>
+              <li><a href="article-fruitiers.html">Arbres Fruitiers Faciles</a></li>
+              <li><a href="article-balcon.html">Potager sur Balcon</a></li>
+              <li><a href="article-lune.html">Jardiner avec la Lune</a></li>
+              <li><a href="article-nuisibles.html">Lutte Contre les Nuisibles</a></li>
+              <li><a href="article-rosiers.html">Taille des Rosiers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Informations</h4>
+            <ul>
+              <li><a href="a-propos.html">À propos de nous</a></li>
+              <li><a href="contact.html">Nous contacter</a></li>
+              <li><a href="mentions-legales.html">Mentions légales</a></li>
+              <li><a href="mentions-legales.html">Politique de confidentialité</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Jardin Passion. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollTop" class="scroll-top" aria-label="Retour en haut">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <script type="module" src="main.js"></script>
+  <script>
+  (function() {
+    var DARK_KEY = 'jp_theme';
+    var btn = document.getElementById('themeToggle');
+    var html = document.documentElement;
+    function setTheme(dark) {
+      if (dark) {
+        html.setAttribute('data-theme', 'dark');
+        if (btn) btn.textContent = '🌙';
+        localStorage.setItem(DARK_KEY, 'dark');
+      } else {
+        html.removeAttribute('data-theme');
+        if (btn) btn.textContent = '☀️';
+        localStorage.setItem(DARK_KEY, 'light');
+      }
+    }
+    // Init from saved preference or system preference
+    var saved = localStorage.getItem(DARK_KEY);
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(saved === 'dark' || (!saved && prefersDark));
+    if (btn) {
+      btn.addEventListener('click', function() {
+        setTheme(html.getAttribute('data-theme') !== 'dark');
+      });
+    }
+  })();
+  </script>
+  <script>
+  (function() {
+    var PAGE_SIZE = 6;
+    var filterBar = document.getElementById('filterBar');
+    var grid = document.getElementById('articlesGrid');
+    var searchInput = document.getElementById('searchInput');
+    var loadMoreBtn = document.getElementById('loadMoreBtn');
+    var loadMoreWrapper = document.getElementById('loadMoreWrapper');
+    if (!filterBar || !grid) return;
+
+    var noResults = document.createElement('div');
+    noResults.className = 'filter-no-results';
+    noResults.innerHTML = '<p>Aucun article ne correspond à votre recherche.</p>';
+    noResults.style.display = 'none';
+    grid.appendChild(noResults);
+
+    var activeFilter = 'all';
+    var visibleCount = 0;
+
+    function getMatchingCards() {
+      var query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      var cards = Array.from(grid.querySelectorAll('.article-card'));
+      return cards.filter(function(card) {
+        var cat = card.getAttribute('data-category');
+        var title = (card.querySelector('.article-title') || {}).textContent || '';
+        var excerpt = (card.querySelector('.article-excerpt') || {}).textContent || '';
+        var text = (title + ' ' + excerpt).toLowerCase();
+        var matchCat = activeFilter === 'all' || cat === activeFilter;
+        var matchSearch = !query || text.indexOf(query) !== -1;
+        return matchCat && matchSearch;
+      });
+    }
+
+    function applyFilters(reset) {
+      if (reset) visibleCount = PAGE_SIZE;
+      var matching = getMatchingCards();
+      var allCards = Array.from(grid.querySelectorAll('.article-card'));
+      // Hide all first
+      allCards.forEach(function(card) { card.classList.add('hidden'); });
+      // Show matching up to visibleCount
+      var shown = 0;
+      matching.forEach(function(card) {
+        if (shown < visibleCount) {
+          card.classList.remove('hidden');
+          shown++;
+        }
+      });
+      noResults.style.display = matching.length === 0 ? 'block' : 'none';
+      if (loadMoreWrapper) {
+        loadMoreWrapper.style.display = matching.length > visibleCount ? 'block' : 'none';
+      }
+    }
+
+    filterBar.addEventListener('click', function(e) {
+      var btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      activeFilter = btn.getAttribute('data-filter');
+      filterBar.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      applyFilters(true);
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function() { applyFilters(true); });
+    }
+
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', function() {
+        visibleCount += PAGE_SIZE;
+        applyFilters(false);
+      });
+    }
+
+    // Initial render
+    applyFilters(true);
+  })();
+  </script>
+  <script src="cookie-consent.js"></script>
+  </body>
+</html>
