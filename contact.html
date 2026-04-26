@@ -294,11 +294,35 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
   btn.disabled=true;
   btn.textContent='Envoi en cours...';
 
-  setTimeout(()=>{
-    document.getElementById('formWrapper').style.display='none';
-    document.getElementById('successMessage').classList.add('visible');
-    window.scrollTo({top:document.getElementById('successMessage').offsetTop-100,behavior:'smooth'});
-  },1200);
+  const lastName=document.getElementById('lastName')?document.getElementById('lastName').value.trim():'';
+
+  fetch('https://formspree.io/f/xqewjnbk',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({
+      prenom: firstName,
+      nom: lastName,
+      email: email,
+      sujet: subject,
+      message: message
+    })
+  })
+  .then(function(res){
+    if(res.ok){
+      document.getElementById('formWrapper').style.display='none';
+      document.getElementById('successMessage').classList.add('visible');
+      window.scrollTo({top:document.getElementById('successMessage').offsetTop-100,behavior:'smooth'});
+    } else {
+      btn.disabled=false;
+      btn.textContent='Envoyer mon message ✉️';
+      alert('Une erreur est survenue. Merci de réessayer ou de nous contacter par email.');
+    }
+  })
+  .catch(function(){
+    btn.disabled=false;
+    btn.textContent='Envoyer mon message ✉️';
+    alert('Une erreur est survenue. Vérifiez votre connexion et réessayez.');
+  });
 });
 </script>
 <script src="cookie-consent.js"></script>
